@@ -1,0 +1,125 @@
+.recommender-hero {
+  text-align: center;
+  margin: 30px;
+  margin-bottom: 60px;
+  padding: 60px 20px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  background-image: url('../ASSETS/img/book_recommender.jpg'); 
+  background-size: cover;       
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+  min-height: 300px;
+}
+
+
+.recommender-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  border-radius: 15px;
+  z-index: 0;
+}
+
+
+.recommender-hero h1,
+.recommender-hero p {
+  position: relative;
+  z-index: 1;
+}
+
+
+.recommender-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  margin-inline: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  background: #6b968874;
+  padding: 40px 20px;
+}
+
+.recommender-filters select,
+.recommender-filters button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.recommender-filters button {
+  background-color: #547792;
+  color: white;
+  border: none;
+}
+
+.recommender-filters button:hover {
+  background-color: #3e5a6e;
+}
+
+.books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-card {
+  width: 150px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.book-card .book-title {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.book-card .book-author {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.book-card .save-bar {
+  width: 80%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 0 auto 10px;
+  overflow: hidden;
+}
+
+.book-card .save-bar .filled {
+  width: 0%;
+  height: 100%;
+  background-color: #547792;
+  transition: width 0.3s ease;
+}

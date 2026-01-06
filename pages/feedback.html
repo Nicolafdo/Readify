@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/LOGO.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readify</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <link rel="stylesheet" href="../CSS/feedback.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="overlay" id="overlay"></div>
+      <div class="nav-logo">
+        <a href="home.html">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="logo-image"
+          />
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="home.html">Home</a>
+        <a href="book_explorer.html">Book Explorer</a>
+        <a href="progress_tracker.html">Progress Tracker</a>
+        <a href="book_recommender.html">Book Recommender</a>
+        <a href="reading_flow.html">Reading Flow</a>
+        <a href="feedback.html" class="active">Feedback</a>
+      </div>
+    </nav>
+
+    <main class="page-content feedback-page">
+      <h2 class="section-title">Feedback & FAQ</h2>
+
+      <div class="feedback-faq-wrapper">
+        <div class="feedback-box">
+          <h3>Send Us Your Feedback</h3>
+
+          <form id="feedback-form">
+            <input type="text" id="name" placeholder="Your Name" />
+            <input type="email" id="email" placeholder="Your Email" />
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+            ></textarea>
+
+            <button type="submit">Submit Feedback</button>
+            <p class="form-message" id="form-message"></p>
+          </form>
+        </div>
+
+        <div class="faq-box">
+          <h3>Frequently Asked Questions</h3>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does Readify track reading progress?</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              Readify tracks your progress based on the percentage you update
+              for each book.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is my data stored securely?</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              Your data is stored locally in your browser using localStorage.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I edit my feedback later?</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              Currently, feedback cannot be edited after submission.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is Readify free to use?</span>
+              <span class="arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes! Readify is completely free to use.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-flex">
+        <div class="footer-container">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="footer-logo"
+          />
+
+          <p>
+            Readify is your daily escape into books, authors, and stories that
+            inspire and educate.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com">
+              <img
+                src="../ASSETS/img/icons/facebook.png"
+                alt="Facebook Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.github.com">
+              <img
+                src="../ASSETS/img/icons/github.png"
+                alt="Github Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.instagram.com">
+              <img
+                src="../ASSETS/img/icons/instagram.png"
+                alt="Instagram Icon"
+                class="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="book_explorer.html">Book Explorer</a>
+          <a href="progress_tracker.html">Progress Tracker</a>
+          <a href="book_recommender.html">Book Recommender</a>
+          <a href="reading_flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Subscribe to our newsletter</h4>
+          <p>Get weekly book recommendations.</p>
+
+          <div class="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="example@gmail.com"
+            />
+            <button id="subscribe-btn">Subscribe</button>
+          </div>
+
+          <p class="newsletter-message" id="newsletter-message"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Readify. All rights reserved.</div>
+    </footer>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/feedback.js"></script>
+  </body>
+</html>

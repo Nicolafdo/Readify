@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "quote": "A reader lives a thousand lives before he dies.",
+        "bookPhrase": "From the pages of epic tales"
+    },
+    {
+        "id": 2,
+        "quote": "So many books, so little time.",
+        "bookPhrase": "A reminder to keep reading"
+    },
+    {
+        "id": 3,
+        "quote": "Books are a uniquely portable magic.",
+        "bookPhrase": "Stories you can carry anywhere"
+    },
+    {
+        "id": 4,
+        "quote": "Reading is essential for those who seek to rise above the ordinary.",
+        "bookPhrase": "Fuel for the curious mind"
+    },
+    {
+        "id": 5,
+        "quote": "There is no friend as loyal as a book.",
+        "bookPhrase": "Companionship between covers"
+    },
+    {
+        "id": 6,
+        "quote": "Once you learn to read, you will be forever free.",
+        "bookPhrase": "Freedom through words"
+    },
+    {
+        "id": 7,
+        "quote": "A book is a dream that you hold in your hand.",
+        "bookPhrase": "Where imagination rests"
+    },
+    {
+        "id": 8,
+        "quote": "Reading gives us someplace to go when we have to stay where we are.",
+        "bookPhrase": "An escape without moving"
+    },
+    {
+        "id": 9,
+        "quote": "Books are mirrors: you only see in them what you already have inside you.",
+        "bookPhrase": "Reflection through reading"
+    },
+    {
+        "id": 10,
+        "quote": "Until I feared I would lose it, I never loved to read.",
+        "bookPhrase": "The power of literacy"
+    },
+    {
+        "id": 11,
+        "quote": "Reading is an exercise in empathy.",
+        "bookPhrase": "Understanding through stories"
+    },
+    {
+        "id": 12,
+        "quote": "We read to know we are not alone.",
+        "bookPhrase": "Shared human experiences"
+    },
+    {
+        "id": 13,
+        "quote": "A book must be the axe for the frozen sea within us.",
+        "bookPhrase": "Words that awaken"
+    },
+    {
+        "id": 14,
+        "quote": "Books wash away from the soul the dust of everyday life.",
+        "bookPhrase": "Cleansing the mind"
+    },
+    {
+        "id": 15,
+        "quote": "You can never get a cup of tea large enough or a book long enough.",
+        "bookPhrase": "Endless comfort in reading"
+    },
+    {
+        "id": 16,
+        "quote": "Reading brings us unknown friends.",
+        "bookPhrase": "Meeting minds across time"
+    },
+    {
+        "id": 17,
+        "quote": "Books are the quietest and most constant of friends.",
+        "bookPhrase": "Always waiting for you"
+    },
+    {
+        "id": 18,
+        "quote": "Reading is a conversation. A good book listens as well.",
+        "bookPhrase": "Dialogue through pages"
+    },
+    {
+        "id": 19,
+        "quote": "Books are lighthouses erected in the great sea of time.",
+        "bookPhrase": "Guidance through history"
+    },
+    {
+        "id": 20,
+        "quote": "A room without books is like a body without a soul.",
+        "bookPhrase": "Life between pages"
+    }
+]

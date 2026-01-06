@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/LOGO.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details | Readify</title>
+
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <link rel="stylesheet" href="../CSS/book_details.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="overlay" id="overlay"></div>
+      <div class="nav-logo">
+        <a href="home.html">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="logo-image"
+          />
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="home.html">Home</a>
+        <a href="book_explorer.html" class="active">Book Explorer</a>
+        <a href="progress_tracker.html">Progress Tracker</a>
+        <a href="book_recommender.html">Book Recommender</a>
+        <a href="reading_flow.html">Reading Flow</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+    </nav>
+    <main class="book-page">
+      <button class="back-btn" onclick="history.back()"><</button>
+
+      <h1 class="page-title" id="book-title"></h1>
+
+      <div class="book-detail-layout">
+        <div class="book-cover-section">
+          <img id="book-cover" alt="Book Cover" />
+
+          <div class="cover-overlay">
+            <span id="book-genre"></span>
+            <span id="book-rating"></span>
+          </div>
+        </div>
+
+        <div class="book-info-section">
+          <p class="book-author" id="book-author"></p>
+
+          <p class="book-synopsis" id="book-synopsis"></p>
+
+          <div class="series-info">
+            <h3>Series</h3>
+            <p id="book-prequel"></p>
+            <p id="book-sequel"></p>
+          </div>
+
+          <div class="reviews-section">
+            <h3>Reviews</h3>
+            <div id="reviews-container"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-flex">
+        <div class="footer-container">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="footer-logo"
+          />
+
+          <p>
+            Readify is your daily escape into books, authors, and stories that
+            inspire and educate.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com">
+              <img
+                src="../ASSETS/img/icons/facebook.png"
+                alt="Facebook Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.github.com">
+              <img
+                src="../ASSETS/img/icons/github.png"
+                alt="Github Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.instagram.com">
+              <img
+                src="../ASSETS/img/icons/instagram.png"
+                alt="Instagram Icon"
+                class="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="book_explorer.html">Book Explorer</a>
+          <a href="progress_tracker.html">Progress Tracker</a>
+          <a href="book_recommender.html">Book Recommender</a>
+          <a href="reading_flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Subscribe to our newsletter</h4>
+          <p>Get weekly book recommendations.</p>
+
+          <div class="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="example@gmail.com"
+            />
+            <button id="subscribe-btn">Subscribe</button>
+          </div>
+
+          <p class="newsletter-message" id="newsletter-message"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Readify. All rights reserved.</div>
+    </footer>
+
+    <script src="../JS/book_details.js"></script>
+  </body>
+</html>

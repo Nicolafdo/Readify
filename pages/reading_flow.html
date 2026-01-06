@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="../ASSETS/img/LOGO.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Readify</title>
+    <link rel="stylesheet" href="../CSS/Styles.css" />
+    <link rel="stylesheet" href="../CSS/reading_flow.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="overlay" id="overlay"></div>
+      <div class="nav-logo">
+        <a href="home.html">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="logo-image"
+          />
+        </a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="home.html">Home</a>
+        <a href="book_explorer.html">Book Explorer</a>
+        <a href="progress_tracker.html">Progress Tracker</a>
+        <a href="book_recommender.html">Book Recommender</a>
+        <a href="reading_flow.html" class="active">Reading Flow</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+    </nav>
+
+    <main class="page-content reading-flow">
+      <div class="music-toggle">
+        <span class="music-icon">🎵</span>
+        <label class="switch">
+          <input type="checkbox" id="music-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <h2 class="section-title">Currently Reading</h2>
+      <div id="reading-books" class="books-grid"></div>
+
+      <h2 class="section-title">Completed</h2>
+      <div id="completed-books" class="books-grid"></div>
+
+      <template id="flow-card-template">
+        <div class="flow-card">
+          <div class="cover-bg"></div>
+
+          <div class="card-overlay">
+            <h4 class="book-title"></h4>
+
+            <div class="progress-circle">
+              <svg viewBox="0 0 100 100">
+                <circle class="bg" cx="50" cy="50" r="40"></circle>
+                <circle class="fg" cx="50" cy="50" r="40"></circle>
+                <text class="percent-text" x="50" y="55">0%</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <audio id="lofi-audio" loop>
+        <source src="../ASSETS/audio/lofi.mp3" type="audio/mpeg" />
+      </audio>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-flex">
+        <div class="footer-container">
+          <img
+            src="../ASSETS/img/LOGO.png"
+            alt="Readify Logo"
+            class="footer-logo"
+          />
+
+          <p>
+            Readify is your daily escape into books, authors, and stories that
+            inspire and educate.
+          </p>
+
+          <div class="social-icons">
+            <a href="https://www.facebook.com">
+              <img
+                src="../ASSETS/img/icons/facebook.png"
+                alt="Facebook Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.github.com">
+              <img
+                src="../ASSETS/img/icons/github.png"
+                alt="Github Icon"
+                class="social-icon"
+              />
+            </a>
+            <a href="https://www.instagram.com">
+              <img
+                src="../ASSETS/img/icons/instagram.png"
+                alt="Instagram Icon"
+                class="social-icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="book_explorer.html">Book Explorer</a>
+          <a href="progress_tracker.html">Progress Tracker</a>
+          <a href="book_recommender.html">Book Recommender</a>
+          <a href="reading_flow.html">Reading Flow</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Subscribe to our newsletter</h4>
+          <p>Get weekly book recommendations.</p>
+
+          <div class="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              placeholder="example@gmail.com"
+            />
+            <button id="subscribe-btn">Subscribe</button>
+          </div>
+
+          <p class="newsletter-message" id="newsletter-message"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Readify. All rights reserved.</div>
+    </footer>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/reading_flow.js"></script>
+  </body>
+</html>

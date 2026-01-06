@@ -1,0 +1,1002 @@
+[
+    {
+        "id": "book_001",
+        "title": "The Ashen Crown",
+        "authorId": "auth_001",
+        "authorName": "Elena Blackwood",
+        "genre": "Fantasy",
+        "coverImage": "book_001.jpeg",
+        "synopsis": "A fallen kingdom forces a reluctant heir to wield forbidden magic.",
+        "series": {
+            "prequel": null,
+            "sequel": "Embers of Fate"
+        },
+        "ratings": [
+            {
+                "reviewer": "Alice",
+                "rating": 5,
+                "comment": "Amazing world-building."
+            }
+        ]
+    },
+    {
+        "id": "book_002",
+        "title": "Embers of Fate",
+        "authorId": "auth_001",
+        "authorName": "Elena Blackwood",
+        "genre": "Fantasy",
+        "coverImage": "book_002.jpeg",
+        "synopsis": "Magic demands sacrifice as war spreads.",
+        "series": {
+            "prequel": "The Ashen Crown",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Mark",
+                "rating": 4,
+                "comment": "Strong sequel."
+            }
+        ]
+    },
+    {
+        "id": "book_003",
+        "title": "Neon Skies",
+        "authorId": "auth_002",
+        "authorName": "Marcus Hale",
+        "genre": "Science Fiction",
+        "coverImage": "book_003.jpeg",
+        "synopsis": "A detective uncovers AI corruption in a cyber city.",
+        "series": {
+            "prequel": null,
+            "sequel": "Neon Requiem"
+        },
+        "ratings": [
+            {
+                "reviewer": "Dan",
+                "rating": 4,
+                "comment": "Fast-paced."
+            }
+        ]
+    },
+    {
+        "id": "book_004",
+        "title": "Neon Requiem",
+        "authorId": "auth_002",
+        "authorName": "Marcus Hale",
+        "genre": "Science Fiction",
+        "coverImage": "book_004.jpeg",
+        "synopsis": "Humanity loses control of its own creations.",
+        "series": {
+            "prequel": "Neon Skies",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Emma",
+                "rating": 5,
+                "comment": "Brilliant."
+            }
+        ]
+    },
+    {
+        "id": "book_005",
+        "title": "Hearts in Bloom",
+        "authorId": "auth_003",
+        "authorName": "Nora Whitman",
+        "genre": "Romance",
+        "coverImage": "book_005.jpeg",
+        "synopsis": "Two broken souls meet unexpectedly.",
+        "series": {
+            "prequel": null,
+            "sequel": "Forever After"
+        },
+        "ratings": [
+            {
+                "reviewer": "Lily",
+                "rating": 5,
+                "comment": "So emotional."
+            }
+        ]
+    },
+    {
+        "id": "book_006",
+        "title": "Forever After",
+        "authorId": "auth_003",
+        "authorName": "Nora Whitman",
+        "genre": "Romance",
+        "coverImage": "book_006.jpeg",
+        "synopsis": "Love is tested by distance and time.",
+        "series": {
+            "prequel": "Hearts in Bloom",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Amy",
+                "rating": 4,
+                "comment": "Heartwarming."
+            }
+        ]
+    },
+    {
+        "id": "book_007",
+        "title": "Blades of Dawn",
+        "authorId": "auth_004",
+        "authorName": "Caleb Storm",
+        "genre": "Fantasy",
+        "coverImage": "book_007.jpeg",
+        "synopsis": "Heroes rise during a brutal war.",
+        "series": {
+            "prequel": null,
+            "sequel": "Stormfall"
+        },
+        "ratings": [
+            {
+                "reviewer": "Jon",
+                "rating": 5,
+                "comment": "Epic!"
+            }
+        ]
+    },
+    {
+        "id": "book_008",
+        "title": "Stormfall",
+        "authorId": "auth_004",
+        "authorName": "Caleb Storm",
+        "genre": "Fantasy",
+        "coverImage": "book_008.jpeg",
+        "synopsis": "The cost of victory becomes clear.",
+        "series": {
+            "prequel": "Blades of Dawn",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Chris",
+                "rating": 4,
+                "comment": "Very intense."
+            }
+        ]
+    },
+    {
+        "id": "book_009",
+        "title": "Silent Footsteps",
+        "authorId": "auth_005",
+        "authorName": "Ivy Chen",
+        "genre": "Mystery",
+        "coverImage": "book_009.jpeg",
+        "synopsis": "A murder with no witnesses.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Nina",
+                "rating": 4,
+                "comment": "Smart mystery."
+            }
+        ]
+    },
+    {
+        "id": "book_010",
+        "title": "Chrome Shadows",
+        "authorId": "auth_006",
+        "authorName": "Lucas Reed",
+        "genre": "Sci-Fi",
+        "coverImage": "book_010.jpeg",
+        "synopsis": "A hacker fights a corporate dystopia.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Alex",
+                "rating": 5,
+                "comment": "Cyberpunk perfection."
+            }
+        ]
+    },
+    {
+        "id": "book_011",
+        "title": "Whispers in the Walls",
+        "authorId": "auth_007",
+        "authorName": "Amelia Frost",
+        "genre": "Horror",
+        "coverImage": "book_011.jpeg",
+        "synopsis": "A haunted mansion remembers everything.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Sam",
+                "rating": 4,
+                "comment": "Creepy!"
+            }
+        ]
+    },
+    {
+        "id": "book_012",
+        "title": "Iron Empire",
+        "authorId": "auth_008",
+        "authorName": "Daniel Moore",
+        "genre": "Historical",
+        "coverImage": "book_012.jpeg",
+        "synopsis": "A forgotten war resurfaces.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Paul",
+                "rating": 5,
+                "comment": "Very authentic."
+            }
+        ]
+    },
+    {
+        "id": "book_013",
+        "title": "Moonbound",
+        "authorId": "auth_009",
+        "authorName": "Sophia Lane",
+        "genre": "YA Fantasy",
+        "coverImage": "book_013.jpeg",
+        "synopsis": "A teen discovers lunar magic.",
+        "series": {
+            "prequel": null,
+            "sequel": "Moonfall"
+        },
+        "ratings": [
+            {
+                "reviewer": "Kate",
+                "rating": 4,
+                "comment": "Fun read."
+            }
+        ]
+    },
+    {
+        "id": "book_014",
+        "title": "Moonfall",
+        "authorId": "auth_009",
+        "authorName": "Sophia Lane",
+        "genre": "YA Fantasy",
+        "coverImage": "book_014.jpeg",
+        "synopsis": "Magic threatens the world.",
+        "series": {
+            "prequel": "Moonbound",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Ella",
+                "rating": 5,
+                "comment": "Loved it."
+            }
+        ]
+    },
+    {
+        "id": "book_015",
+        "title": "Mind Games",
+        "authorId": "auth_010",
+        "authorName": "Ethan Cole",
+        "genre": "Thriller",
+        "coverImage": "book_015.jpeg",
+        "synopsis": "A psychologist hunts a killer.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Tom",
+                "rating": 4,
+                "comment": "Very tense."
+            }
+        ]
+    },
+    {
+        "id": "book_016",
+        "title": "City of Spirits",
+        "authorId": "auth_011",
+        "authorName": "Luna Park",
+        "genre": "Urban Fantasy",
+        "coverImage": "book_016.jpeg",
+        "synopsis": "Ghosts rule the city at night.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Zoe",
+                "rating": 5,
+                "comment": "Loved the vibe."
+            }
+        ]
+    },
+    {
+        "id": "book_017",
+        "title": "Cold Case Alley",
+        "authorId": "auth_012",
+        "authorName": "Oliver Grant",
+        "genre": "Crime",
+        "coverImage": "book_017.jpeg",
+        "synopsis": "A detective reopens an old murder.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Mike",
+                "rating": 4,
+                "comment": "Solid crime novel."
+            }
+        ]
+    },
+    {
+        "id": "book_018",
+        "title": "Still Waters",
+        "authorId": "auth_013",
+        "authorName": "Maya Rivers",
+        "genre": "Literary",
+        "coverImage": "book_018.jpeg",
+        "synopsis": "A quiet town hides deep pain.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Anna",
+                "rating": 5,
+                "comment": "Beautiful prose."
+            }
+        ]
+    },
+    {
+        "id": "book_019",
+        "title": "Star Battalion",
+        "authorId": "auth_014",
+        "authorName": "Victor Steele",
+        "genre": "Sci-Fi",
+        "coverImage": "book_019.jpeg",
+        "synopsis": "Soldiers fight across galaxies.",
+        "series": {
+            "prequel": null,
+            "sequel": "Last Orbit"
+        },
+        "ratings": [
+            {
+                "reviewer": "Leo",
+                "rating": 4,
+                "comment": "Action packed."
+            }
+        ]
+    },
+    {
+        "id": "book_020",
+        "title": "Last Orbit",
+        "authorId": "auth_014",
+        "authorName": "Victor Steele",
+        "genre": "Sci-Fi",
+        "coverImage": "book_020.jpeg",
+        "synopsis": "A final stand in space.",
+        "series": {
+            "prequel": "Star Battalion",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Ryan",
+                "rating": 5,
+                "comment": "Epic ending."
+            }
+        ]
+    },
+    {
+        "id": "book_021",
+        "title": "Broken Promises",
+        "authorId": "auth_015",
+        "authorName": "Isabella Cruz",
+        "genre": "Romance",
+        "coverImage": "book_021.jpeg",
+        "synopsis": "Love tested by betrayal.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Maria",
+                "rating": 4,
+                "comment": "Emotional."
+            }
+        ]
+    },
+    {
+        "id": "book_022",
+        "title": "After the Ashes",
+        "authorId": "auth_016",
+        "authorName": "Ryan Holt",
+        "genre": "Post-Apocalyptic",
+        "coverImage": "book_022.jpeg",
+        "synopsis": "Survivors rebuild civilization.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Ben",
+                "rating": 5,
+                "comment": "Gripping."
+            }
+        ]
+    },
+    {
+        "id": "book_023",
+        "title": "The Teacup Murders",
+        "authorId": "auth_017",
+        "authorName": "Harper Quinn",
+        "genre": "Mystery",
+        "coverImage": "book_023.jpeg",
+        "synopsis": "A small town hides a killer.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Clara",
+                "rating": 4,
+                "comment": "Charming mystery."
+            }
+        ]
+    },
+    {
+        "id": "book_024",
+        "title": "Crown of Titans",
+        "authorId": "auth_018",
+        "authorName": "Theo Knight",
+        "genre": "Fantasy",
+        "coverImage": "book_024.jpeg",
+        "synopsis": "Gods and kings collide.",
+        "series": {
+            "prequel": null,
+            "sequel": "Fall of Gods"
+        },
+        "ratings": [
+            {
+                "reviewer": "Eric",
+                "rating": 5,
+                "comment": "Massive scale."
+            }
+        ]
+    },
+    {
+        "id": "book_025",
+        "title": "Fall of Gods",
+        "authorId": "auth_018",
+        "authorName": "Theo Knight",
+        "genre": "Fantasy",
+        "coverImage": "book_025.jpeg",
+        "synopsis": "The end of divine rule.",
+        "series": {
+            "prequel": "Crown of Titans",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Sean",
+                "rating": 5,
+                "comment": "Perfect finale."
+            }
+        ]
+    },
+    {
+        "id": "book_026",
+        "title": "Summer Static",
+        "authorId": "auth_019",
+        "authorName": "Jade Summers",
+        "genre": "Contemporary",
+        "coverImage": "book_026.jpeg",
+        "synopsis": "A life changes one summer.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Liam",
+                "rating": 4,
+                "comment": "Relatable."
+            }
+        ]
+    },
+    {
+        "id": "book_027",
+        "title": "Into the Wild Blue",
+        "authorId": "auth_020",
+        "authorName": "Noah Brooks",
+        "genre": "Adventure",
+        "coverImage": "book_027.jpeg",
+        "synopsis": "A survival journey across oceans.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Jake",
+                "rating": 5,
+                "comment": "Thrilling."
+            }
+        ]
+    },
+    {
+        "id": "book_028",
+        "title": "Shadows of the Crown",
+        "authorId": "auth_001",
+        "authorName": "Elena Blackwood",
+        "genre": "Fantasy",
+        "coverImage": "book_028.jpeg",
+        "synopsis": "A former queen manipulates events from the shadows to reclaim power.",
+        "series": {
+            "prequel": "Embers of Fate",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Hannah",
+                "rating": 4,
+                "comment": "Dark and clever."
+            }
+        ]
+    },
+    {
+        "id": "book_029",
+        "title": "Synthetic Dawn",
+        "authorId": "auth_002",
+        "authorName": "Marcus Hale",
+        "genre": "Science Fiction",
+        "coverImage": "book_029.jpeg",
+        "synopsis": "The first AI-led city begins to rewrite human law.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Oliver",
+                "rating": 5,
+                "comment": "Terrifyingly realistic."
+            }
+        ]
+    },
+    {
+        "id": "book_030",
+        "title": "Love, Interrupted",
+        "authorId": "auth_003",
+        "authorName": "Nora Whitman",
+        "genre": "Romance",
+        "coverImage": "book_030.jpeg",
+        "synopsis": "A sudden tragedy forces lovers apart and back together.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Rachel",
+                "rating": 4,
+                "comment": "Very touching."
+            }
+        ]
+    },
+    {
+        "id": "book_031",
+        "title": "Siege of the North",
+        "authorId": "auth_004",
+        "authorName": "Caleb Storm",
+        "genre": "Fantasy",
+        "coverImage": "book_031.jpeg",
+        "synopsis": "An army marches into frozen lands seeking conquest.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Peter",
+                "rating": 5,
+                "comment": "Epic battles."
+            }
+        ]
+    },
+    {
+        "id": "book_032",
+        "title": "The Missing Hour",
+        "authorId": "auth_005",
+        "authorName": "Ivy Chen",
+        "genre": "Mystery",
+        "coverImage": "book_032.jpeg",
+        "synopsis": "An hour disappears from surveillance footage during a crime.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Laura",
+                "rating": 5,
+                "comment": "Brilliant twist."
+            }
+        ]
+    },
+    {
+        "id": "book_033",
+        "title": "Neon Drift",
+        "authorId": "auth_006",
+        "authorName": "Lucas Reed",
+        "genre": "Sci-Fi",
+        "coverImage": "book_033.jpeg",
+        "synopsis": "A courier smuggles data that could collapse megacorporations.",
+        "series": {
+            "prequel": "Chrome Shadows",
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Evan",
+                "rating": 4,
+                "comment": "Pure cyberpunk."
+            }
+        ]
+    },
+    {
+        "id": "book_034",
+        "title": "The Black Choir",
+        "authorId": "auth_007",
+        "authorName": "Amelia Frost",
+        "genre": "Horror",
+        "coverImage": "book_034.jpeg",
+        "synopsis": "A choir sings songs that summon the dead.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Nate",
+                "rating": 5,
+                "comment": "Chilling."
+            }
+        ]
+    },
+    {
+        "id": "book_035",
+        "title": "Empire of Dust",
+        "authorId": "auth_008",
+        "authorName": "Daniel Moore",
+        "genre": "Historical",
+        "coverImage": "book_035.jpeg",
+        "synopsis": "An empire collapses under its own ambition.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "George",
+                "rating": 4,
+                "comment": "Very immersive."
+            }
+        ]
+    },
+    {
+        "id": "book_036",
+        "title": "Starborn Trials",
+        "authorId": "auth_009",
+        "authorName": "Sophia Lane",
+        "genre": "YA Fantasy",
+        "coverImage": "book_036.jpeg",
+        "synopsis": "Teenagers compete for celestial power.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Mia",
+                "rating": 4,
+                "comment": "Fun and fast."
+            }
+        ]
+    },
+    {
+        "id": "book_037",
+        "title": "The Final Patient",
+        "authorId": "auth_010",
+        "authorName": "Ethan Cole",
+        "genre": "Thriller",
+        "coverImage": "book_037.jpeg",
+        "synopsis": "A killer hides behind psychiatric sessions.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Josh",
+                "rating": 5,
+                "comment": "Couldn’t stop reading."
+            }
+        ]
+    },
+    {
+        "id": "book_038",
+        "title": "Midnight Alley",
+        "authorId": "auth_011",
+        "authorName": "Luna Park",
+        "genre": "Urban Fantasy",
+        "coverImage": "book_038.jpeg",
+        "synopsis": "A hidden street where magic trades hands.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Iris",
+                "rating": 4,
+                "comment": "Loved the setting."
+            }
+        ]
+    },
+    {
+        "id": "book_039",
+        "title": "Dead Letter File",
+        "authorId": "auth_012",
+        "authorName": "Oliver Grant",
+        "genre": "Crime",
+        "coverImage": "book_039.jpeg",
+        "synopsis": "Unsent letters reveal a serial killer’s past.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Sam",
+                "rating": 4,
+                "comment": "Very clever."
+            }
+        ]
+    },
+    {
+        "id": "book_040",
+        "title": "Glass Houses",
+        "authorId": "auth_013",
+        "authorName": "Maya Rivers",
+        "genre": "Literary",
+        "coverImage": "book_040.jpeg",
+        "synopsis": "A family crumbles under unspoken truths.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Nora",
+                "rating": 5,
+                "comment": "Deeply moving."
+            }
+        ]
+    },
+    {
+        "id": "book_041",
+        "title": "Iron Protocol",
+        "authorId": "auth_014",
+        "authorName": "Victor Steele",
+        "genre": "Sci-Fi",
+        "coverImage": "book_041.jpeg",
+        "synopsis": "Military command clashes with alien strategy.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Victor",
+                "rating": 4,
+                "comment": "Great action."
+            }
+        ]
+    },
+    {
+        "id": "book_042",
+        "title": "When We Fell",
+        "authorId": "auth_015",
+        "authorName": "Isabella Cruz",
+        "genre": "Romance",
+        "coverImage": "book_042.jpeg",
+        "synopsis": "A relationship unravels after a life-changing mistake.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Claudia",
+                "rating": 4,
+                "comment": "Very emotional."
+            }
+        ]
+    },
+    {
+        "id": "book_043",
+        "title": "Dust and Silence",
+        "authorId": "auth_016",
+        "authorName": "Ryan Holt",
+        "genre": "Post-Apocalyptic",
+        "coverImage": "book_043.jpeg",
+        "synopsis": "Survivors navigate a world without sound.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Aaron",
+                "rating": 5,
+                "comment": "Unique concept."
+            }
+        ]
+    },
+    {
+        "id": "book_044",
+        "title": "The Lavender Lie",
+        "authorId": "auth_017",
+        "authorName": "Harper Quinn",
+        "genre": "Mystery",
+        "coverImage": "book_044.jpeg",
+        "synopsis": "A garden club hides deadly secrets.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Becky",
+                "rating": 4,
+                "comment": "Cozy and clever."
+            }
+        ]
+    },
+    {
+        "id": "book_045",
+        "title": "Oath of Fire",
+        "authorId": "auth_018",
+        "authorName": "Theo Knight",
+        "genre": "Fantasy",
+        "coverImage": "book_045.jpeg",
+        "synopsis": "Warriors swear loyalty to living flames.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Ian",
+                "rating": 5,
+                "comment": "Fantastic lore."
+            }
+        ]
+    },
+    {
+        "id": "book_046",
+        "title": "Fading Echoes",
+        "authorId": "auth_019",
+        "authorName": "Jade Summers",
+        "genre": "Contemporary",
+        "coverImage": "book_046.jpeg",
+        "synopsis": "Memories fade after a sudden loss.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Olivia",
+                "rating": 4,
+                "comment": "Very real."
+            }
+        ]
+    },
+    {
+        "id": "book_047",
+        "title": "Below the Surface",
+        "authorId": "auth_020",
+        "authorName": "Noah Brooks",
+        "genre": "Adventure",
+        "coverImage": "book_047.jpeg",
+        "synopsis": "Divers uncover a sunken mystery.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Tyler",
+                "rating": 5,
+                "comment": "Exciting!"
+            }
+        ]
+    },
+    {
+        "id": "book_048",
+        "title": "The Long March Home",
+        "authorId": "auth_008",
+        "authorName": "Daniel Moore",
+        "genre": "Historical",
+        "coverImage": "book_048.jpeg",
+        "synopsis": "Soldiers struggle to return after war ends.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Henry",
+                "rating": 4,
+                "comment": "Very human."
+            }
+        ]
+    },
+    {
+        "id": "book_049",
+        "title": "Static Hearts",
+        "authorId": "auth_006",
+        "authorName": "Lucas Reed",
+        "genre": "Sci-Fi",
+        "coverImage": "book_049.jpeg",
+        "synopsis": "Love survives in a wired world.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Kim",
+                "rating": 4,
+                "comment": "Unexpectedly emotional."
+            }
+        ]
+    },
+    {
+        "id": "book_050",
+        "title": "Last Light on Earth",
+        "authorId": "auth_016",
+        "authorName": "Ryan Holt",
+        "genre": "Post-Apocalyptic",
+        "coverImage": "book_050.jpeg",
+        "synopsis": "Humanity faces extinction as the sun fades.",
+        "series": {
+            "prequel": null,
+            "sequel": null
+        },
+        "ratings": [
+            {
+                "reviewer": "Dylan",
+                "rating": 5,
+                "comment": "Powerful ending."
+            }
+        ]
+    }
+]

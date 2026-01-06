@@ -1,0 +1,182 @@
+[
+    {
+        "id": "auth_001",
+        "name": "Elena Blackwood",
+        "bio": "Fantasy author known for dark magic and tragic heroes.",
+        "genres": [
+            "Fantasy"
+        ],
+        "image": "auth_001.jpeg"
+    },
+    {
+        "id": "auth_002",
+        "name": "Marcus Hale",
+        "bio": "Sci-fi writer exploring AI and future societies.",
+        "genres": [
+            "Science Fiction"
+        ],
+        "image": "auth_002.jpeg"
+    },
+    {
+        "id": "auth_003",
+        "name": "Nora Whitman",
+        "bio": "Romance author focused on emotional realism.",
+        "genres": [
+            "Romance"
+        ],
+        "image": "auth_003.jpeg"
+    },
+    {
+        "id": "auth_004",
+        "name": "Caleb Storm",
+        "bio": "Epic fantasy and large-scale wars.",
+        "genres": [
+            "Fantasy"
+        ],
+        "image": "auth_004.jpeg"
+    },
+    {
+        "id": "auth_005",
+        "name": "Ivy Chen",
+        "bio": "Mystery writer with clever twists.",
+        "genres": [
+            "Mystery"
+        ],
+        "image": "auth_005.jpeg"
+    },
+    {
+        "id": "auth_006",
+        "name": "Lucas Reed",
+        "bio": "Cyberpunk dystopian author.",
+        "genres": [
+            "Sci-Fi"
+        ],
+        "image": "auth_006.jpeg"
+    },
+    {
+        "id": "auth_007",
+        "name": "Amelia Frost",
+        "bio": "Gothic horror storyteller.",
+        "genres": [
+            "Horror"
+        ],
+        "image": "auth_007.jpeg"
+    },
+    {
+        "id": "auth_008",
+        "name": "Daniel Moore",
+        "bio": "Historical fiction writer.",
+        "genres": [
+            "Historical"
+        ],
+        "image": "auth_008.jpeg"
+    },
+    {
+        "id": "auth_009",
+        "name": "Sophia Lane",
+        "bio": "Young adult fantasy author.",
+        "genres": [
+            "YA"
+        ],
+        "image": "auth_009.jpeg"
+    },
+    {
+        "id": "auth_010",
+        "name": "Ethan Cole",
+        "bio": "Psychological thrillers.",
+        "genres": [
+            "Thriller"
+        ],
+        "image": "auth_010.jpeg"
+    },
+    {
+        "id": "auth_011",
+        "name": "Luna Park",
+        "bio": "Urban fantasy writer.",
+        "genres": [
+            "Urban Fantasy"
+        ],
+        "image": "auth_011.jpeg"
+    },
+    {
+        "id": "auth_012",
+        "name": "Oliver Grant",
+        "bio": "Detective crime novels.",
+        "genres": [
+            "Crime"
+        ],
+        "image": "auth_012.jpeg"
+    },
+    {
+        "id": "auth_013",
+        "name": "Maya Rivers",
+        "bio": "Literary fiction author.",
+        "genres": [
+            "Literary"
+        ],
+        "image": "auth_013.jpeg"
+    },
+    {
+        "id": "auth_014",
+        "name": "Victor Steele",
+        "bio": "Military sci-fi specialist.",
+        "genres": [
+            "Sci-Fi"
+        ],
+        "image": "auth_014.jpeg"
+    },
+    {
+        "id": "auth_015",
+        "name": "Isabella Cruz",
+        "bio": "Romantic drama author.",
+        "genres": [
+            "Romance"
+        ],
+        "image": "auth_015.jpeg"
+    },
+    {
+        "id": "auth_016",
+        "name": "Ryan Holt",
+        "bio": "Post-apocalyptic survival stories.",
+        "genres": [
+            "Post-Apocalyptic"
+        ],
+        "image": "auth_016.jpeg"
+    },
+    {
+        "id": "auth_017",
+        "name": "Harper Quinn",
+        "bio": "Cozy mystery writer.",
+        "genres": [
+            "Mystery"
+        ],
+        "image": "auth_017.jpeg"
+    },
+    {
+        "id": "auth_018",
+        "name": "Theo Knight",
+        "bio": "Epic fantasy world-builder.",
+        "genres": [
+            "Fantasy"
+        ],
+        "image": "auth_018.jpeg"
+    },
+    {
+        "id": "auth_019",
+        "name": "Jade Summers",
+        "bio": "Contemporary fiction author.",
+        "genres": [
+            "Contemporary"
+        ],
+        "image": "auth_019.jpeg"
+    },
+    {
+        "id": "auth_020",
+        "name": "Noah Brooks",
+        "bio": "Adventure and survival writer.",
+        "genres": [
+            "Adventure"
+        ],
+        "image": "auth_020.jpeg"
+    }
+]
