@@ -3,7 +3,7 @@ const suggestedContainer = document.getElementById("suggested-books");
 const pickBtn = document.getElementById("pick-btn");
 
 function loadBooks() {
-  fetch("../DATA/books.json")
+  fetch("../data/books.json")
     .then((res) => res.json())
     .then((data) => {
       allBooks = data;
@@ -62,7 +62,7 @@ function renderBooks(books) {
     card.className = "book-card";
 
     card.innerHTML =
-      '<img src="../ASSETS/img/book cover/' +
+      '<img src="../assets/img/book-cover/' +
       book.coverImage +
       '" alt="' +
       book.title +

@@ -3,7 +3,7 @@ const phraseEl = document.getElementById("hero-phrase");
 
 async function loadQuotes() {
   try {
-    const response = await fetch("../DATA/quote.json");
+    const response = await fetch("../data/quote.json");
     const quotes = await response.json();
 
     showDailyQuote(quotes);
@@ -47,8 +47,8 @@ loadQuotes();
 async function loadAuthorOfTheDay() {
   try {
     const [authorsRes, booksRes] = await Promise.all([
-      fetch("../DATA/authors.json"),
-      fetch("../DATA/books.json"),
+      fetch("../data/authors.json"),
+      fetch("../data/books.json"),
     ]);
     const authors = await authorsRes.json();
     const books = await booksRes.json();
@@ -81,7 +81,7 @@ async function loadAuthorOfTheDay() {
     document.getElementById("author-name").textContent = selectedAuthor.name;
     document.getElementById(
       "author-image"
-    ).src = `../ASSETS/img/authors/${selectedAuthor.image}`;
+    ).src = `../assets/img/authors/${selectedAuthor.image}`;
     document.getElementById("author-image").alt = selectedAuthor.name;
     document.getElementById("author-bio").textContent = selectedAuthor.bio;
 
@@ -95,7 +95,7 @@ async function loadAuthorOfTheDay() {
       bookWrapper.classList.add("book-wrapper");
 
       const img = document.createElement("img");
-      img.src = `../ASSETS/img/book cover/${book.coverImage}`;
+      img.src = `../assets/img/book-cover/${book.coverImage}`;
       img.alt = book.title;
 
       const title = document.createElement("div");
