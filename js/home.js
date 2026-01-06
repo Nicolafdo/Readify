@@ -3,7 +3,7 @@ const phraseEl = document.getElementById("hero-phrase");
 
 async function loadQuotes() {
   try {
-    const response = await fetch("../data/quote.json");
+    const response = await fetch("/Readify/data/quote.json");
     const quotes = await response.json();
 
     showDailyQuote(quotes);
@@ -47,8 +47,8 @@ loadQuotes();
 async function loadAuthorOfTheDay() {
   try {
     const [authorsRes, booksRes] = await Promise.all([
-      fetch("../data/authors.json"),
-      fetch("../data/books.json"),
+      fetch("/Readify/data/authors.json"),
+      fetch("/Readify/data//books.json"),
     ]);
     const authors = await authorsRes.json();
     const books = await booksRes.json();
