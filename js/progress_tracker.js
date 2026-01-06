@@ -3,7 +3,7 @@ const saveBtn = document.getElementById("save-btn");
 
 let allBooks = [];
 
-fetch("../DATA/books.json")
+fetch("../data/books.json")
   .then((res) => res.json())
   .then((data) => {
     allBooks = data;

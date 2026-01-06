@@ -25,7 +25,7 @@ progressList.forEach((book) => {
 
   card.querySelector(
     ".cover-bg"
-  ).style.backgroundImage = `url('../ASSETS/img/book cover/${book.coverImage}')`;
+  ).style.backgroundImage = `url('../assets/img/book-cover/${book.coverImage}')`;
 
   const fg = card.querySelector(".fg");
   const percentText = card.querySelector(".percent-text");

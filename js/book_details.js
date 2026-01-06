@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const bookId = params.get("id");
 
-fetch("../DATA/books.json")
+fetch("../data/books.json")
   .then((res) => res.json())
   .then((books) => {
     const book = books.find((book) => book.id == bookId);
@@ -13,7 +13,7 @@ fetch("../DATA/books.json")
     document.getElementById("book-synopsis").textContent = book.synopsis;
     document.getElementById("book-genre").textContent = book.genre;
     document.getElementById("book-cover").src =
-      "../ASSETS/img/book cover/" + book.coverImage;
+      "../assets/img/book-cover/" + book.coverImage;
 
     document.getElementById("book-prequel").textContent = book.series.prequel
       ? "Prequel: " + book.series.prequel
