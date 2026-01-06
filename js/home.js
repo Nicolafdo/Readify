@@ -81,7 +81,7 @@ async function loadAuthorOfTheDay() {
     document.getElementById("author-name").textContent = selectedAuthor.name;
     document.getElementById(
       "author-image"
-    ).src = `../assets/img/authors/${selectedAuthor.image}`;
+    ).src = `/Readify/assets/img/authors/${selectedAuthor.image}`;
     document.getElementById("author-image").alt = selectedAuthor.name;
     document.getElementById("author-bio").textContent = selectedAuthor.bio;
 
@@ -95,7 +95,7 @@ async function loadAuthorOfTheDay() {
       bookWrapper.classList.add("book-wrapper");
 
       const img = document.createElement("img");
-      img.src = `../assets/img/book-cover/${book.coverImage}`;
+      img.src = `/Readify/assets/img/book-cover/${book.coverImage}`;
       img.alt = book.title;
 
       const title = document.createElement("div");
