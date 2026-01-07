@@ -341,7 +341,6 @@
   animation: pulse 2s ease-in-out infinite;
 }
 
-/* Empty state animation */
 @keyframes fadeInScale {
   from {
     opacity: 0;
@@ -357,7 +356,6 @@
   animation: fadeInScale 0.6s ease-out;
 }
 
-/* Progress completion celebration */
 @keyframes celebrate {
   0%, 100% {
     transform: rotate(0deg) scale(1);
@@ -385,7 +383,6 @@
   background: rgba(76, 175, 80, 0.8);
 }
 
-/* Loading animation for cards */
 @keyframes shimmerLoading {
   0% {
     background-position: -200% center;
@@ -406,7 +403,6 @@
   animation: shimmerLoading 1.5s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .books-grid {
     gap: 15px;

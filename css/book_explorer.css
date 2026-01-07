@@ -247,7 +247,6 @@
   box-shadow: none;
 }
 
-/* Loading animation for when books are being fetched */
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
@@ -261,7 +260,6 @@
   animation: pulse 1.5s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .book-explorer-top {
     padding: 15px 10px;

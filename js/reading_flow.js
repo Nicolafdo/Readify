@@ -5,7 +5,6 @@ const audio = document.getElementById("lofi-audio");
 const vinyl = document.getElementById("vinyl");
 const musicToggleBtn = document.getElementById("musicToggleBtn");
 
-// Load saved state
 let musicOn = localStorage.getItem("musicOn") === "true";
 
 if (musicOn) {
@@ -13,7 +12,6 @@ if (musicOn) {
   audio.play().catch(() => {});
 }
 
-// Click toggle
 musicToggleBtn.addEventListener("click", () => {
   musicOn = !musicOn;
   localStorage.setItem("musicOn", musicOn);

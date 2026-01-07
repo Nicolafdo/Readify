@@ -347,7 +347,6 @@
   animation: pulse 0.6s ease-in-out;
 }
 
-/* Success animation */
 @keyframes successBounce {
   0%, 100% {
     transform: scale(1);
@@ -367,7 +366,6 @@
   animation: successBounce 0.6s ease-out;
 }
 
-/* Empty state */
 .progress-display.empty {
   opacity: 0.6;
   animation: fadeIn 0.6s ease-out;
@@ -377,7 +375,6 @@
   opacity: 1;
 }
 
-/* Loading state for buttons */
 .progress-form button.loading,
 #save-btn.loading {
   pointer-events: none;
@@ -405,7 +402,6 @@
   to { transform: rotate(360deg); }
 }
 
-/* Milestone celebration */
 @keyframes celebrate {
   0% {
     transform: scale(1);
@@ -428,7 +424,6 @@
   animation: celebrate 0.8s ease-out;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .progress-hero {
     padding: 40px 15px;

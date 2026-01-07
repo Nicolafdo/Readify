@@ -49,7 +49,6 @@ function showDailyQuote(quotes) {
     currentIndex = 1;
   }
 
-  // Change quote every minute (60000 milliseconds)
   setInterval(updateQuote, 60000);
 }
 loadQuotes();

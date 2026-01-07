@@ -385,7 +385,6 @@
 }
 
 
-/* Loading state for button */
 .feedback-box button.loading {
   pointer-events: none;
   opacity: 0.7;
