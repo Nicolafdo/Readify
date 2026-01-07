@@ -48,7 +48,7 @@ async function loadAuthorOfTheDay() {
   try {
     const [authorsRes, booksRes] = await Promise.all([
       fetch("/Readify/data/authors.json"),
-      fetch("/Readify/data//books.json"),
+      fetch("/Readify/data/books.json"),
     ]);
     const authors = await authorsRes.json();
     const books = await booksRes.json();

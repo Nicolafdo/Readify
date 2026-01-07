@@ -95,26 +95,42 @@
 
 .music-toggle {
   position: fixed;
-  margin-top: 10px;
   right: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background: rgba(0, 0, 0, 0.5);
-  padding: 6px 12px;
-  border-radius: 30px;
-  z-index: 9999;
+  padding: 8px 14px;
+  border-radius: 40px;
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  width: 50px;
 }
 
-.music-toggle .music-icon {
-  font-size: 18px;
+.vinyl {
+  width: 32px;
+  transition: transform .6s ease, margin-left .6s ease;
 }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.vinyl.playing {
+  animation: spin 1.4s linear infinite;
+  margin-left: 20px;
+  transform: rotate(10deg);
+}
+
+
 
 .books-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }

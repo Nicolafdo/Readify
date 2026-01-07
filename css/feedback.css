@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   padding: 20px;
+  margin-bottom: 30px;
 }
 
 .feedback-box,
@@ -16,8 +17,9 @@
   color: #000000;
 }
 
-.section-title {
-  margin: 10px;
+.title {
+  text-align: center;
+  margin: 40px 0px;
 }
 
 .feedback-box input,
@@ -33,7 +35,7 @@
 .feedback-box button {
   width: 100%;
   padding: 12px;
-  background: #6b968874;
+  background: #547792c9;
   border: none;
   color: #fff;
   font-size: 15px;
@@ -42,7 +44,7 @@
 }
 
 .feedback-box button:hover {
-  background: #6b9688;
+  background: #547792;
 }
 
 .form-message {

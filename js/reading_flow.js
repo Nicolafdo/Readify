@@ -1,16 +1,28 @@
 const readingContainer = document.getElementById("reading-books");
 const completedContainer = document.getElementById("completed-books");
 const template = document.getElementById("flow-card-template");
-const musicToggle = document.getElementById("music-toggle");
 const audio = document.getElementById("lofi-audio");
+const vinyl = document.getElementById("vinyl");
+const musicToggleBtn = document.getElementById("musicToggleBtn");
 
-musicToggle.checked = localStorage.getItem("musicOn") === "true";
+// Load saved state
+let musicOn = localStorage.getItem("musicOn") === "true";
 
-musicToggle.addEventListener("change", () => {
-  localStorage.setItem("musicOn", musicToggle.checked);
-  if (musicToggle.checked) {
+if (musicOn) {
+  vinyl.classList.add("playing");
+  audio.play().catch(() => {});
+}
+
+// Click toggle
+musicToggleBtn.addEventListener("click", () => {
+  musicOn = !musicOn;
+  localStorage.setItem("musicOn", musicOn);
+
+  if (musicOn) {
+    vinyl.classList.add("playing");
     audio.play().catch(() => {});
   } else {
+    vinyl.classList.remove("playing");
     audio.pause();
   }
 });

@@ -15,6 +15,9 @@ html, body {
 
 
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,8 +161,8 @@ nav {
 
 
 .footer {
-    background-color: #EAE0CF;
-    padding: 20px 20px 10px;
+    background-color: #94B4C1;
+    padding: 20px 0px;
     color: #333;
 }
 
@@ -168,6 +171,7 @@ nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 60px;
 }
 
@@ -246,7 +250,7 @@ nav {
 
 .footer-newsletter p {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .newsletter-form {
@@ -290,7 +294,7 @@ nav {
 
 
 .footer-bottom {
-    margin-top: 40px;
+    margin-top: 5px;
     text-align: center;
     font-size: 13px;
     opacity: 0.8;

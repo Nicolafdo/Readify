@@ -43,8 +43,13 @@
   margin-inline: 20px;
   border-radius: 20px;
   flex-wrap: wrap;
-  background: #6b968874;
-  padding: 40px 20px;
+  padding: 10px 0px;
+}
+
+.bg {
+  background-color: #6b968874;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .recommender-filters select,
@@ -59,13 +64,13 @@
 }
 
 .recommender-filters button {
-  background-color: #547792;
+  background-color: #547792cc;
   color: white;
   border: none;
 }
 
 .recommender-filters button:hover {
-  background-color: #3e5a6e;
+  background-color: #547792;
 }
 
 .books-container {
@@ -73,6 +78,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .book-card {

@@ -75,14 +75,14 @@
   font-size: 1rem;
   border-radius: 8px;
   border: none;
-  background-color: #547792;
+  background-color: #547792c6;
   color: white;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .progress-form button:hover {
-  background-color: #3e5a6e;
+  background-color: #547792;
 }
 
 .progress-display {
@@ -119,9 +119,9 @@
 
 #save-btn {
   margin-top: 10px;
-  background-color: #4caf50;
+  background-color: #547792cb;
 }
 
 #save-btn:hover {
-  background-color: #3e8e41;
+  background-color: #547792;
 }
