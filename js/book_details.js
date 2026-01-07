@@ -8,8 +8,7 @@ fetch("../data/books.json")
     if (!book) return;
 
     document.getElementById("book-title").textContent = book.title;
-    document.getElementById("book-author").textContent =
-      "by " + book.authorName;
+    document.getElementById("book-author").textContent = book.authorName;
     document.getElementById("book-synopsis").textContent = book.synopsis;
     document.getElementById("book-genre").textContent = book.genre;
     document.getElementById("book-cover").src =

@@ -1,120 +1,265 @@
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f6f8;
-  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  color: #2c3e50;
+  line-height: 1.6;
 }
-
 
 .book-page {
-  min-height: 100vh;
-  padding: 40px 80px;
+  padding: 60px 80px;
+  max-width: 100%;
+  margin: 0 auto;
 }
-
 
 .back-btn {
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2c3e50;
+  color: white;
   border: none;
-  font-size: 28px;
+  padding: 12px 24px;
+  border-radius: 50px;
   cursor: pointer;
-  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 40px;
 }
 
-.page-title {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 40px;
+.back-btn:hover {
+  background: #34495e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.3);
+}
+
+.back-btn:active {
+  transform: translateY(0);
+}
+
+.back-icon {
+  width: 18px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover .back-icon {
+  transform: translateX(-3px);
 }
 
 .book-detail-layout {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 50px;
+  grid-template-columns: 450px 1fr;
+  gap: 80px;
   align-items: flex-start;
+  background: white;
+  padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .book-cover-section {
   position: relative;
+  width: 100%;
 }
 
 .book-cover-section img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
 }
 
+.book-cover-section:hover img {
+  transform: translateY(-5px);
+}
 
 .cover-overlay {
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  padding: 8px 12px;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 12px 16px;
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  background: rgba(0,0,0,0.7);
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
   color: #fff;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+.cover-overlay span:last-child::before {
+  content: "⭐ ";
 }
 
 .book-info-section {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 35px;
 }
 
+.page-title {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a252f;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
 
 .book-author {
-  font-size: 18px;
-  color: #555;
+  font-size: 20px;
+  color: #7f8c8d;
+  font-weight: 500;
+  margin: 0 0 35px 0;
+  font-style: italic;
 }
 
+.book-author::before {
+  content: "by ";
+  font-style: normal;
+  color: #95a5a6;
+}
 
 .book-synopsis {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #4a5568;
+  padding: 30px;
+  background: #f8f9fa;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  margin: 0;
 }
 
+.series-info,
+.reviews-section {
+  padding-top: 10px;
+}
 
 .series-info h3,
 .reviews-section h3 {
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 20px 0;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
 }
 
 .series-info p {
-  color: #444;
-  margin-bottom: 5px;
+  color: #5a6c7d;
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  padding-left: 12px;
+  position: relative;
 }
 
+.series-info p::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+#reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .review {
-  background: #fff;
-  padding: 12px 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.review:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .review strong {
-  display: block;
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #2c3e50;
 }
 
+.review p {
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+@media (max-width: 1200px) {
+  .book-page {
+    padding: 40px 60px;
+  }
+  
+  .book-detail-layout {
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    padding: 40px;
+  }
+}
 
 @media (max-width: 900px) {
   .book-page {
-    padding: 20px;
+    padding: 30px 20px;
   }
 
   .book-detail-layout {
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .book-cover-section {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .page-title {
+    font-size: 36px;
+  }
+
+  .book-author {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
     font-size: 32px;
+  }
+
+  .book-synopsis {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .series-info h3,
+  .reviews-section h3 {
+    font-size: 20px;
   }
 }

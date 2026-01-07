@@ -15,32 +15,42 @@ async function loadQuotes() {
 }
 
 function showDailyQuote(quotes) {
-  const today = new Date().toISOString().split("T")[0];
-  const saved = localStorage.getItem("dailyQuote");
+  const quoteEl = document.getElementById("hero-quote");
+  const phraseEl = document.getElementById("hero-phrase");
 
-  if (saved) {
-    const parsed = JSON.parse(saved);
-    if (parsed.date === today) {
-      quoteEl.textContent = `“${parsed.quote}”`;
-      phraseEl.textContent = parsed.bookPhrase;
-      return;
-    }
+  let currentIndex = 0;
+
+  function updateQuote() {
+    quoteEl.classList.add("fade-out");
+    phraseEl.classList.add("fade-out");
+
+    setTimeout(() => {
+      const selected = quotes[currentIndex];
+      quoteEl.textContent = `"${selected.quote}"`;
+      phraseEl.textContent = selected.bookPhrase;
+
+      quoteEl.classList.remove("fade-out");
+      phraseEl.classList.remove("fade-out");
+      quoteEl.classList.add("fade-in");
+      phraseEl.classList.add("fade-in");
+
+      currentIndex = (currentIndex + 1) % quotes.length;
+
+      setTimeout(() => {
+        quoteEl.classList.remove("fade-in");
+        phraseEl.classList.remove("fade-in");
+      }, 600);
+    }, 600);
   }
 
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const selected = quotes[randomIndex];
+  if (quotes.length > 0) {
+    quoteEl.textContent = `"${quotes[0].quote}"`;
+    phraseEl.textContent = quotes[0].bookPhrase;
+    currentIndex = 1;
+  }
 
-  localStorage.setItem(
-    "dailyQuote",
-    JSON.stringify({
-      date: today,
-      quote: selected.quote,
-      bookPhrase: selected.bookPhrase,
-    })
-  );
-
-  quoteEl.textContent = `“${selected.quote}”`;
-  phraseEl.textContent = selected.bookPhrase;
+  // Change quote every minute (60000 milliseconds)
+  setInterval(updateQuote, 60000);
 }
 loadQuotes();
 

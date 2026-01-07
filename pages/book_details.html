@@ -39,9 +39,10 @@
       </div>
     </nav>
     <main class="book-page">
-      <button class="back-btn" onclick="history.back()"><</button>
-
-      <h1 class="page-title" id="book-title"></h1>
+      <button class="back-btn" onclick="history.back()">
+        <img src="../assets/img/icons/arrow.png" alt="Back" class="back-icon" />
+        <span>Back</span>
+      </button>
 
       <div class="book-detail-layout">
         <div class="book-cover-section">
@@ -54,7 +55,10 @@
         </div>
 
         <div class="book-info-section">
-          <p class="book-author" id="book-author"></p>
+          <div>
+            <h1 class="page-title" id="book-title"></h1>
+            <p class="book-author" id="book-author"></p>
+          </div>
 
           <p class="book-synopsis" id="book-synopsis"></p>
 

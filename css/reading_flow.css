@@ -1,24 +1,155 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes progressDraw {
+  from {
+    stroke-dashoffset: 251;
+  }
+  to {
+    stroke-dashoffset: var(--progress-offset, 251);
+  }
+}
+
+.section-title {
+  margin: 20px 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: start;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #588eb8, #6ba3d4);
+  border-radius: 2px;
+  animation: slideInRight 0.8s ease-out 0.3s backwards;
+}
+
+.books-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  animation: fadeIn 0.6s ease-out 0.2s backwards;
+}
+
 .flow-card {
   position: relative;
   width: 180px;
   height: 280px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  background: transparent; 
+  background: transparent;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.flow-card:nth-child(1) { animation-delay: 0.1s; }
+.flow-card:nth-child(2) { animation-delay: 0.2s; }
+.flow-card:nth-child(3) { animation-delay: 0.3s; }
+.flow-card:nth-child(4) { animation-delay: 0.4s; }
+.flow-card:nth-child(5) { animation-delay: 0.5s; }
+.flow-card:nth-child(6) { animation-delay: 0.6s; }
+
+.flow-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.flow-card:hover::before {
+  opacity: 1;
+  animation: shimmer 1.5s ease-in-out;
 }
 
 .flow-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: float 2s ease-in-out infinite;
 }
-
-.section-title {
-  margin: 10px;
-}
-
 
 .cover-bg {
   position: absolute;
@@ -26,6 +157,12 @@
   background-size: cover;
   background-position: center;
   z-index: 1;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.flow-card:hover .cover-bg {
+  transform: scale(1.08);
+  filter: brightness(1.1);
 }
 
 .card-overlay {
@@ -36,22 +173,33 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: background 0.3s ease;
 }
 
-
+.flow-card:hover .card-overlay {
+  background: rgba(0, 0, 0, 0.1);
+}
 
 .book-title {
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
   color: #fff;
   font-size: 15px;
   text-align: center;
   font-weight: 600;
-  background: rgba(0, 0, 0, 0.28);
-  text-shadow: 0 2px 8px rgba(0,0,0,1);
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
   line-height: 1.4;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.flow-card:hover .book-title {
+  background: rgba(88, 142, 184, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
 
 .progress-circle {
   width: 100%;
@@ -59,18 +207,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.flow-card:hover .progress-circle {
+  transform: scale(1.1);
 }
 
 .progress-circle svg {
   width: 110px;
   height: 110px;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+  transition: filter 0.3s ease;
+}
+
+.flow-card:hover .progress-circle svg {
+  filter: drop-shadow(0 6px 16px rgba(88, 142, 184, 0.8));
 }
 
 .bg {
   fill: none;
-  stroke: rgba(255,255,255,0.25);
+  stroke: rgba(255, 255, 255, 0.25);
   stroke-width: 7;
+  transition: stroke 0.3s ease;
+}
+
+.flow-card:hover .bg {
+  stroke: rgba(255, 255, 255, 0.4);
 }
 
 .fg {
@@ -82,7 +245,12 @@
   stroke-dashoffset: 251;
   transform: rotate(-90deg);
   transform-origin: center;
-  transition: stroke-dashoffset 1s ease;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.3s ease;
+}
+
+.flow-card:hover .fg {
+  stroke: #6ba3d4;
+  stroke-width: 8;
 }
 
 .percent-text {
@@ -90,7 +258,14 @@
   font-size: 22px;
   font-weight: bold;
   text-anchor: middle;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+  transition: all 0.3s ease;
+}
+
+.flow-card:hover .percent-text {
+  font-size: 24px;
+  fill: #ffffff;
+  filter: drop-shadow(0 3px 8px rgba(88, 142, 184, 1));
 }
 
 .music-toggle {
@@ -100,37 +275,173 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   padding: 8px 14px;
   border-radius: 40px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 9999;
   width: 50px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  animation: slideInRight 0.6s ease-out 0.4s backwards;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.music-toggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateX(-3px);
+  width: 55px;
+}
+
+.music-toggle.expanded {
+  width: auto;
+  padding-right: 18px;
 }
 
 .vinyl {
   width: 32px;
-  transition: transform .6s ease, margin-left .6s ease;
+  height: 32px;
+  transition: transform 0.6s ease, margin-left 0.6s ease, filter 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.vinyl:hover {
+  filter: drop-shadow(0 3px 6px rgba(88, 142, 184, 0.6));
 }
 
 .vinyl.playing {
   animation: spin 1.4s linear infinite;
   margin-left: 20px;
   transform: rotate(10deg);
+  filter: drop-shadow(0 3px 8px rgba(88, 142, 184, 0.8));
 }
 
+.music-toggle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: linear-gradient(
+    135deg,
+    rgba(88, 142, 184, 0.2),
+    rgba(107, 163, 212, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
 
+.music-toggle:hover::before {
+  opacity: 1;
+}
 
-.books-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+.music-toggle.playing {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Empty state animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.empty-state {
+  animation: fadeInScale 0.6s ease-out;
+}
+
+/* Progress completion celebration */
+@keyframes celebrate {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.15);
+  }
+  75% {
+    transform: rotate(-3deg) scale(1.1);
+  }
+}
+
+.flow-card.completed .progress-circle {
+  animation: celebrate 0.8s ease-out;
+}
+
+.flow-card.completed .fg {
+  stroke: #4caf50;
+}
+
+.flow-card.completed .book-title {
+  background: rgba(76, 175, 80, 0.8);
+}
+
+/* Loading animation for cards */
+@keyframes shimmerLoading {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.flow-card.loading {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmerLoading 1.5s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .books-grid {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .flow-card {
+    width: 150px;
+    height: 240px;
+  }
+
+  .progress-circle svg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .percent-text {
+    font-size: 18px;
+  }
+
+  .book-title {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .music-toggle {
+    right: 15px;
+    margin-top: 8px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title::after {
+    left: 10%;
+  }
 }

@@ -1,4 +1,91 @@
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes successPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.title {
+  text-align: center;
+  margin: 40px 0px;
+  animation: fadeInDown 0.8s ease-out;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #547792, #6b9bb0);
+  border-radius: 2px;
+  animation: slideInLeft 0.8s ease-out 0.3s backwards;
+}
 
 .feedback-faq-wrapper {
   display: grid;
@@ -8,61 +95,181 @@
   margin-bottom: 30px;
 }
 
-.feedback-box,
-.faq-box {
-  background: #EEEEEE;
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+.feedback-box {
+  background: linear-gradient(135deg, #f5f5f5 0%, #EEEEEE 100%);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   color: #000000;
+  animation: slideInLeft 0.8s ease-out;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.title {
-  text-align: center;
-  margin: 40px 0px;
+.feedback-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.feedback-box:hover::before {
+  left: 100%;
+}
+
+.feedback-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.faq-box {
+  background: linear-gradient(135deg, #f5f5f5 0%, #EEEEEE 100%);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  animation: slideInRight 0.8s ease-out;
+  transition: all 0.3s ease;
+}
+
+.faq-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feedback-box h2,
+.faq-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  animation: fadeInDown 0.6s ease-out 0.2s backwards;
 }
 
 .feedback-box input,
 .feedback-box textarea {
   width: 95%;
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 15px;
-  border-radius: 8px;
-  border: none;
+  border-radius: 10px;
+  border: 2px solid transparent;
   font-size: 14px;
+  background: white;
+  transition: all 0.3s ease;
+  animation: fadeInScale 0.5s ease-out backwards;
+}
+
+.feedback-box input:nth-child(1) { animation-delay: 0.3s; }
+.feedback-box input:nth-child(2) { animation-delay: 0.4s; }
+.feedback-box textarea { animation-delay: 0.5s; }
+
+.feedback-box input:focus,
+.feedback-box textarea:focus {
+  outline: none;
+  border-color: #547792;
+  box-shadow: 0 0 0 3px rgba(84, 119, 146, 0.1);
+  transform: translateY(-2px);
+}
+
+.feedback-box input::placeholder,
+.feedback-box textarea::placeholder {
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.feedback-box input:focus::placeholder,
+.feedback-box textarea:focus::placeholder {
+  color: #bbb;
 }
 
 .feedback-box button {
   width: 100%;
-  padding: 12px;
-  background: #547792c9;
+  padding: 14px;
+  background: linear-gradient(135deg, #547792c9 0%, #456580c9 100%);
   border: none;
   color: #fff;
-  font-size: 15px;
-  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInScale 0.5s ease-out 0.6s backwards;
+}
+
+.feedback-box button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.feedback-box button:hover::before {
+  width: 400%;
+  height: 400%;
 }
 
 .feedback-box button:hover {
-  background: #547792;
+  background: linear-gradient(135deg, #547792 0%, #456580 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(84, 119, 146, 0.4);
+}
+
+.feedback-box button:active {
+  transform: translateY(0);
 }
 
 .form-message {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  animation: fadeInScale 0.4s ease-out;
 }
 
-
-@media (max-width: 768px) {
-  .feedback-faq-wrapper {
-    grid-template-columns: 1fr; 
-  }
+.form-message.success {
+  background: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  animation: successPulse 0.5s ease-out;
 }
 
-
+.form-message.error {
+  background: rgba(244, 67, 54, 0.1);
+  color: #c62828;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  animation: shake 0.4s ease-out;
+}
 
 .faq-item {
   border-bottom: 1px solid rgba(54, 53, 53, 0.2);
+  animation: fadeInScale 0.5s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.2s; }
+.faq-item:nth-child(2) { animation-delay: 0.3s; }
+.faq-item:nth-child(3) { animation-delay: 0.4s; }
+.faq-item:nth-child(4) { animation-delay: 0.5s; }
+.faq-item:nth-child(5) { animation-delay: 0.6s; }
+
+.faq-item:hover {
+  background: rgba(84, 119, 146, 0.05);
+  padding-left: 10px;
+  border-radius: 8px;
 }
 
 .faq-question {
@@ -70,30 +277,127 @@
   background: none;
   border: none;
   color: #000000;
-  padding: 14px 0;
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.faq-question:hover {
+  color: #547792;
+  padding-left: 5px;
+}
+
+.faq-question::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: #547792;
+  transition: width 0.3s ease;
+}
+
+.faq-question:hover::before {
+  width: 5px;
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   font-size: 14px;
-  line-height: 1.5;
-  transition: max-height 0.3s ease;
+  line-height: 1.7;
+  color: #555;
+  padding: 0 10px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 300px;
+  padding: 10px 10px 20px 10px;
+  opacity: 1;
+  animation: fadeInDown 0.4s ease-out;
+}
+
+.faq-item.active {
+  background: rgba(84, 119, 146, 0.08);
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.faq-item.active .faq-question {
+  color: #547792;
+}
+
+.arrow {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  font-size: 18px;
+  color: #547792;
 }
 
 .faq-item.active .arrow {
   transform: rotate(180deg);
 }
 
-.arrow {
-  transition: transform 0.3s ease;
+.faq-question:hover .arrow {
+  transform: scale(1.2);
+}
+
+.faq-item.active .faq-question:hover .arrow {
+  transform: rotate(180deg) scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .feedback-faq-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-box,
+  .faq-box {
+    animation: fadeInScale 0.6s ease-out;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+
+  .feedback-box,
+  .faq-box {
+    padding: 20px;
+  }
+}
+
+/* Loading state for button */
+.feedback-box button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.feedback-box button.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

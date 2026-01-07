@@ -1,52 +1,127 @@
 .hero {
   display: flex;
-  min-height: 70vh;
+  min-height: 80vh;
   width: 100%;
+  gap: 0px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .hero-text,
 .hero-image {
   width: 50%;
-  margin: 10px;
+  z-index: 1;
 }
-
 
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px;
+  padding: 20px;
+  animation: fadeInLeft 0.8s ease-out;
 }
 
 .hero-quote {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
 .hero-phrase {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
+.hero-quote.fade-out,
+.hero-phrase.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.hero-quote.fade-in,
+.hero-phrase.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .hero-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: fadeInRight 0.8s ease-out;
 }
 
 .hero-image img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.hero-image img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
+    padding: 0px 0px;
+    min-height: auto;
   }
 
   .hero-text,
@@ -55,74 +130,177 @@
     text-align: center;
   }
 
-  .hero-text {
-    padding: 40px 20px;
+  .hero-quote {
+    font-size: 2rem;
+  }
+
+  .hero-phrase {
+    font-size: 1rem;
   }
 }
 
-
 #author-of-the-day {
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  text-align: center;     
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#author-of-the-day h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#author-of-the-day h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a90e2, #357abd);
+  border-radius: 2px;
+}
+
+#author-of-the-day h3 {
+  font-size: 1.8rem;
+  color: #4a90e2;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .author-img {
-  width: 250px;
-  height: auto;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  margin: 20px 0 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 5px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.author-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+#author-of-the-day p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+#author-of-the-day h4 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .books-row {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+  margin-bottom: 40px;
 }
 
 .book-wrapper {
   position: relative;
-  width: 180;
-  height: auto;
-  border-radius: 5px;
+  width: 160px;
+  height: 240px;
+  border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.book-wrapper:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .book-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
+.book-wrapper:hover img {
+  transform: scale(1.1);
+}
 
 .book-wrapper .book-title {
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 100%);
   color: white;
-  font-size: 12px;
-  padding: 3px 5px;
-  text-align: center;}
-
-.hero-text {
-        padding: 0px;
-    }
-
-.book-wrapper {
-  height: 160px;
-  width: 120px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 8px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease;
 }
 
-.books-row {
-  gap: 5px;
+.book-wrapper:hover .book-title {
+  background: linear-gradient(180deg, rgba(74, 144, 226, 0.95) 0%, rgba(74, 144, 226, 0.6) 100%);
 }
 
+@media (max-width: 768px) {
+  #author-of-the-day {
+    padding: 60px 20px;
+  }
 
+  #author-of-the-day h2 {
+    font-size: 2rem;
+  }
 
+  #author-of-the-day h3 {
+    font-size: 1.5rem;
+  }
 
+  .author-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  #author-of-the-day p {
+    font-size: 1rem;
+  }
+
+  .books-row {
+    gap: 15px;
+  }
+
+  .book-wrapper {
+    width: 140px;
+    height: 210px;
+  }
+}
