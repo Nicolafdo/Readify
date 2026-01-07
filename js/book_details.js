@@ -15,8 +15,8 @@ fetch("../data/books.json")
       "../assets/img/book-cover/" + book.coverImage;
 
     document.getElementById("book-prequel").textContent = book.series.prequel
-      ? "Prequel: " + book.series.prequel
-      : "No prequel";
+      ? " Prequel: " + book.series.prequel
+      : " No prequel";
 
     document.getElementById("book-sequel").textContent = book.series.sequel
       ? "Sequel: " + book.series.sequel

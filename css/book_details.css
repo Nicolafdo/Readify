@@ -99,10 +99,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-.cover-overlay span:last-child::before {
-  content: "⭐ ";
-}
-
 .book-info-section {
   display: flex;
   flex-direction: column;
@@ -168,7 +164,7 @@ body {
 }
 
 .series-info p::before {
-  content: "→";
+  content: "*";
   position: absolute;
   left: 0;
   color: #3498db;
