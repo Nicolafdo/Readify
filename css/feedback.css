@@ -93,6 +93,7 @@
   gap: 30px;
   padding: 20px;
   margin-bottom: 30px;
+  text-align: start;
 }
 
 .feedback-box {
@@ -281,6 +282,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: start;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -375,7 +377,13 @@
   .faq-box {
     padding: 20px;
   }
+
+  .feedback-box input,
+.feedback-box textarea {
+    width: 90%;
+  }
 }
+
 
 /* Loading state for button */
 .feedback-box button.loading {

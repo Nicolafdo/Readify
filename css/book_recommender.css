@@ -122,7 +122,7 @@
 
 .bg {
   background: linear-gradient(135deg, #6b968874 0%, #5a856e74 100%);
-  padding: 20px;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
@@ -391,4 +391,24 @@
   .book-card img {
     height: 190px;
   }
+
+  @media (max-width: 768px) {
+  .recommender-filters {
+    margin-inline: 10px;
+  }
+  
+  .bg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .recommender-filters select,
+  .recommender-filters button {
+    width: 100%;
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+}
 }
