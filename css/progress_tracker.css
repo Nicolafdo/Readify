@@ -88,19 +88,27 @@
   text-align: center;
   margin-bottom: 40px;
   position: relative;
-  color: white; 
-  padding: 60px 20px; 
+  color: white;
+  padding: 60px 20px;
   border-radius: 15px;
   overflow: hidden;
+
   background-image: url('../assets/img/progress_tracker.jpg');
   background-repeat: no-repeat;
-  background-position: center center; 
-  background-size: cover; 
+  background-position: center;
+  background-size: cover;
+
   min-height: 300px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  animation: scaleIn 0.8s ease-out;
-  transition: transform 0.3s ease;
 }
+
+
+.progress-hero h1,
+.progress-hero p {
+  position: relative;
+  z-index: 1;
+}
+
 
 .progress-hero:hover {
   transform: translateY(-3px);
@@ -108,20 +116,18 @@
 }
 
 .progress-hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.4); 
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60); 
   z-index: 0;
   transition: background 0.3s ease;
 }
 
 .progress-hero:hover::before {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.70);
 }
+
 
 .progress-hero h1 {
   position: relative;
@@ -455,4 +461,10 @@
   .progress-info span {
     text-align: center;
   }
+}
+
+.footer-newsletter-subscribe {
+  font-size: 1rem; 
+  font-weight: 600;
+  margin: 0 0 10px 0;
 }

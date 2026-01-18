@@ -46,9 +46,16 @@
       <section class="progress-form">
         <div class="bg">
           <div class="form-row">
+            <label for="book-title" class="sr-only">Book title</label>
             <input type="text" id="book-title" placeholder="Book Title" />
+
+            <label for="total-pages" class="sr-only">Total pages</label>
             <input type="number" id="total-pages" placeholder="Total Pages" />
+
+            <label for="pages-read" class="sr-only">Pages read</label>
             <input type="number" id="pages-read" placeholder="Pages Read" />
+
+            <label for="daily-speed" class="sr-only">Pages per day</label>
             <input type="number" id="daily-speed" placeholder="Pages per Day" />
           </div>
 
@@ -119,15 +126,22 @@
         </div>
 
         <div class="footer-newsletter">
-          <h4>Subscribe to our newsletter</h4>
+          <h2 class="footer-newsletter-subscribe">
+            Subscribe to our newsletter
+          </h2>
           <p>Get weekly book recommendations.</p>
 
           <div class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">
+              Email address
+            </label>
+
             <input
               type="email"
               id="newsletter-email"
               placeholder="example@gmail.com"
             />
+
             <button id="subscribe-btn">Subscribe</button>
           </div>
 

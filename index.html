@@ -39,7 +39,7 @@
 
     <main class="page-content">
       <div>
-        <section class="hero">
+        <div class="hero">
           <div class="hero-text">
             <p class="hero-quote" id="hero-quote"></p>
             <p class="hero-phrase" id="hero-phrase"></p>
@@ -48,12 +48,17 @@
           <div class="hero-image">
             <img src="./assets/img/home.jpg" alt="Reading inspiration" />
           </div>
-        </section>
+        </div>
       </div>
       <div id="author-of-the-day">
         <h2>Author of the Day</h2>
-        <h3 id="author-name"></h3>
-        <img id="author-image" alt="Author Image" class="author-img" />
+        <h3 id="author-name">Default</h3>
+        <img
+          id="author-image"
+          alt="Author Image"
+          class="author-img"
+          src="./assets/img/authors/auth_020.jpeg"
+        />
         <p id="author-bio"></p>
         <h4>Famous Books</h4>
         <div id="author-books" class="books-row"></div>
@@ -113,11 +118,16 @@
           <p>Get weekly book recommendations.</p>
 
           <div class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">
+              Email address
+            </label>
+
             <input
               type="email"
               id="newsletter-email"
               placeholder="example@gmail.com"
             />
+
             <button id="subscribe-btn">Subscribe</button>
           </div>
 

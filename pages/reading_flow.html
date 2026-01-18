@@ -39,7 +39,12 @@
 
     <main class="page-content reading-flow">
       <div class="music-toggle" id="musicToggleBtn">
-        <img src="../assets/img/vinyl.png" class="vinyl" id="vinyl" />
+        <img
+          src="../assets/img/vinyl.png"
+          class="vinyl"
+          id="vinyl"
+          alt="vinyl"
+        />
       </div>
 
       <h2 class="section-title">Currently Reading</h2>
@@ -53,7 +58,7 @@
           <div class="cover-bg"></div>
 
           <div class="card-overlay">
-            <h4 class="book-title"></h4>
+            <h3 class="book-title"></h3>
 
             <div class="progress-circle">
               <svg viewBox="0 0 100 100">
@@ -124,11 +129,16 @@
           <p>Get weekly book recommendations.</p>
 
           <div class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">
+              Email address
+            </label>
+
             <input
               type="email"
               id="newsletter-email"
               placeholder="example@gmail.com"
             />
+
             <button id="subscribe-btn">Subscribe</button>
           </div>
 

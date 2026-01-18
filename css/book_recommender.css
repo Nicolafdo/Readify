@@ -64,49 +64,57 @@
   border-radius: 15px;
   color: white;
   position: relative;
-  background-image: url('../assets/img/book_recommender.jpg'); 
-  background-size: cover;       
-  background-position: center; 
-  background-repeat: no-repeat; 
+
+  background-image: url('../assets/img/book_recommender.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   overflow: hidden;
   min-height: 300px;
   animation: fadeIn 0.8s ease-out;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* DARK OVERLAY (single source of truth) */
 .recommender-hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4); 
+  inset: 0;
+  background: rgba(0, 0, 0, 0.60); /* WCAG-safe */
   border-radius: 15px;
   z-index: 0;
   transition: background 0.3s ease;
 }
 
 .recommender-hero:hover::before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.70);
 }
 
-.recommender-hero h1 {
+/* KEEP TEXT ABOVE OVERLAY */
+.recommender-hero h1,
+.recommender-hero p {
   position: relative;
   z-index: 1;
+}
+
+/* h1 styling */
+.recommender-hero h1 {
   animation: slideInDown 0.8s ease-out 0.2s backwards;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
+/* p styling */
 .recommender-hero p {
-  position: relative;
-  z-index: 1;
   animation: slideInDown 0.8s ease-out 0.4s backwards;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   font-size: 1.2rem;
 }
+
 
 .recommender-filters {
   display: flex;
@@ -409,4 +417,10 @@
     padding: 12px 14px;
   }
 }
+}
+
+.footer-newsletter-subscribe {
+  font-size: 1rem; 
+  font-weight: 600;
+  margin: 0 0 10px 0;
 }

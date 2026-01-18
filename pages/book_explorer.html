@@ -39,6 +39,7 @@
 
     <main class="page-content">
       <div class="book-explorer-top">
+        <label for="book-search" class="sr-only">Search for books</label>
         <input type="text" id="book-search" placeholder="Search for books..." />
 
         <select id="genre-filter">
@@ -112,11 +113,16 @@
           <p>Get weekly book recommendations.</p>
 
           <div class="newsletter-form">
+            <label for="newsletter-email" class="sr-only">
+              Email address
+            </label>
+
             <input
               type="email"
               id="newsletter-email"
               placeholder="example@gmail.com"
             />
+
             <button id="subscribe-btn">Subscribe</button>
           </div>
 

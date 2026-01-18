@@ -260,6 +260,7 @@
   animation: pulse 1.5s ease-in-out infinite;
 }
 
+
 @media (max-width: 768px) {
   .book-explorer-top {
     padding: 15px 10px;
