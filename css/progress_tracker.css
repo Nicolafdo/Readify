@@ -102,11 +102,23 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
+.progress-hero-content{
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 16px 22px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.70); 
+  max-width: 900px;
+}
+
 
 .progress-hero h1,
 .progress-hero p {
   position: relative;
   z-index: 1;
+  color: #fff;              
+  text-shadow: none; 
 }
 
 

@@ -78,6 +78,17 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.recommender-hero-content{
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 16px 22px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.70); 
+  max-width: 900px;
+}
+
+
 /* DARK OVERLAY (single source of truth) */
 .recommender-hero::before {
   content: "";
